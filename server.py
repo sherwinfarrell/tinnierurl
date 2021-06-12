@@ -13,7 +13,6 @@ from shortener import Shortener
 app = Flask(__name__)
 
 ENV = 'prod'
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 
 if ENV == 'dev':
     app.debug = True
@@ -70,6 +69,10 @@ def resolveUrl(code):
     else:
         print("Redirecting to url "+ resolved_url)
         return redirect(resolved_url)
+
+def create_tables():
+    with app.app_context():
+        db.create_all()
 
 if __name__ == '__main__':
     app.run('0.0.0.0',port=5000, threaded = True)
