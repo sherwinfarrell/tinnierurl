@@ -2,11 +2,27 @@ from json import encoder
 from flask import Flask, render_template, redirect, url_for, request, Response
 from time import sleep
 import json
-from shortener import Shortener 
 from json import dumps, loads
+from flask_sqlalchemy import SQLAlchemy
+import os
+from extensions import db
+from shortener import Shortener
+
 
 
 app = Flask(__name__)
+
+ENV = 'prod'
+if ENV == 'dev':
+    app.debug = True
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL_DEV')
+else:
+    app.debug = False
+    app.config['SQLALCHEMY_DATABASE_URI'] = ''
+
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+
+db.init_app(app)
 
 
 @app.route('/', methods=['GET'])
@@ -50,9 +66,6 @@ def resolveUrl(code):
     else:
         print("Redirecting to url "+ resolved_url)
         return redirect(resolved_url)
-
-
-
 
 if __name__ == '__main__':
     app.run('0.0.0.0',port=5000, threaded = True)
