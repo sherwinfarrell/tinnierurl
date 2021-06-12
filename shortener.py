@@ -42,7 +42,7 @@ class Shortener():
             shortened_url = cls.encode(id)
             print("The shortened URL is "+ shortened_url)
             # cls.num_of_urls = cls.num_of_urls + 1
-        return "localhost:5000/"+ shortened_url
+        return "https://tinnieurl.herokuapp.com/"+ shortened_url
     
     @classmethod
     def resolve(cls,code):
