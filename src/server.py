@@ -5,8 +5,8 @@ import json
 from json import dumps, loads
 from flask_sqlalchemy import SQLAlchemy
 import os
-from extensions import db
-from shortener import Shortener
+from .extensions import db
+from .shortener import Shortener
 
 
 
