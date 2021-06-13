@@ -10,7 +10,7 @@ from app.db import db
 
 app = Flask(__name__)
 
-ENV = 'prod'
+ENV = 'dev'
 
 if ENV == 'dev':
     app.debug = True
@@ -30,6 +30,7 @@ db.init_app(app)
 @app.route('/', methods=['GET'])
 def index():
     return render_template('index.html')
+
 
 @app.route('/shortenUrl', methods=['POST'])
 def shortenUrl():
@@ -63,6 +64,8 @@ def resolveUrl(code):
         print("The following Exception has happened: " +  str(e))
         error = e
 
+    if str(error) == "URL is unknown":
+        return render_template('error.html')
     if error:
         return Response(json.dumps({"message": "There was an error: " + str(error) + " Please try again."}), mimetype='application/json', status='400')
     else:
