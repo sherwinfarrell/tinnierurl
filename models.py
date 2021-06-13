@@ -4,7 +4,7 @@ from extensions import db
 class TinnieRepository(db.Model):
     __tablename__ = 'urltracker'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    url = db.Column(db.String(200), unique=True)
+    url = db.Column(db.String(500), unique=True)
 
     def __init__(self, url):
         self.url = url
