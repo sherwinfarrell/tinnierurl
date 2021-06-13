@@ -70,7 +70,7 @@ def resolveUrl(code):
         print("Redirecting to url "+ resolved_url)
         return redirect(resolved_url)
 
-def create_tables():
+def modify_tables():
     with app.app_context():
         db.drop_all()
         db.create_all()
