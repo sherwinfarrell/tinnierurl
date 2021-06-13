@@ -2,7 +2,8 @@
 import math
 import logging
 import psycopg2
-import app.shortener
+from . import models 
+
 class Shortener():
     memory_dict = {}
     num_of_urls = 100000

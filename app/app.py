@@ -4,8 +4,8 @@ import json
 from json import dumps, loads
 from flask_sqlalchemy import SQLAlchemy
 import os
-from app.shortener import Shortener
-from app.db import db
+from .shortener import Shortener
+from .db import db
 
 
 app = Flask(__name__)

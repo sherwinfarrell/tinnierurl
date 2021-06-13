@@ -1,5 +1,5 @@
 from flask_sqlalchemy import SQLAlchemy
-from app.db import db
+from .db import db
 
 class TinnieRepository(db.Model):
     __tablename__ = 'urltracker'
