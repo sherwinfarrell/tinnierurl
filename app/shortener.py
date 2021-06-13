@@ -5,7 +5,7 @@ import psycopg2
 from . import models
 from .log import CustomLogger
 
-ENV = "dev"
+ENV = "prod"
 class Shortener():
     memory_dict = {}
     num_of_urls = 100000
