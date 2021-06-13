@@ -4,10 +4,10 @@ import json
 from json import dumps, loads
 from flask_sqlalchemy import SQLAlchemy
 import os
-from app.shortener import Shortener
-from app.shortener import ENV
-from app.db import db
-from app.log import CustomLogger
+from util.shortener import Shortener
+from util.shortener import ENV
+from util.db import db
+from util.log import CustomLogger
 
 
 app = Flask(__name__)
