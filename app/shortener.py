@@ -3,11 +3,16 @@ import math
 import logging
 import psycopg2
 from . import models
+from .log import CustomLogger
+
+ENV = "dev"
 class Shortener():
     memory_dict = {}
     num_of_urls = 100000
     characters = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
     base = len(characters)
+    clLogger = CustomLogger(__name__)
+    logger = clLogger.get_logger()
     # cur = con.cursor()
 
     @classmethod
@@ -33,38 +38,38 @@ class Shortener():
             shortened_url = cls.encode(cid)
 
         else:
-            print("Adding it to the database")
+            cls.logger.info("Adding it to the database")
             id = models.add_url(url)
-            print("Added to the database")
+            cls.logger.info("Added to the database")
             cls.memory_dict[url] = id
             shortened_url = cls.encode(id)
-            print("The shortened URL is "+ shortened_url)
-            # cls.num_of_urls = cls.num_of_urls + 1
-        return "https://tinnieurl.herokuapp.com/"+ shortened_url
+            cls.logger.info("The shortened URL is "+ shortened_url)
+        if ENV == 'dev':
+            return "localhost:5000/"+ shortened_url
+        else:
+            return "https://tinnieurl.herokuapp.com/"+ shortened_url
     
     @classmethod
     def resolve(cls,code):
         url = None
         base_numbers = []
         for c in code:
-            print(c)
             base_numbers.append(cls.characters.index(c))
-        print(base_numbers)
         base_numbers = base_numbers[::-1]
-
+        cls.logger.info("Base numbers generate are: "+ str(base_numbers))
         base_10_sum = 0
         for index,num in enumerate(base_numbers):
             base_10_sum = base_10_sum + (int(num)*math.pow(int(cls.base), int(index)))
 
-        print("The base sum is: " + str(base_10_sum))
+        cls.logger.info("The base sum is: " + str(base_10_sum))
         url = [url for url, i in cls.memory_dict.items() if i == int(base_10_sum)]
         if url == []:
             url = [models.get_url(int(base_10_sum))]
             if url[0] == None:
+                cls.logger.exception("The url is unknown")
                 raise Exception("URL is unknown")
             else: 
                 cls.memory_dict[int(base_10_sum)] = url[0]
 
-            
-        print(url)
+        cls.logger.info(f"The url that is being sent back is {str(url[0])}")
         return url[0]

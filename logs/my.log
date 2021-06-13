@@ -1,0 +1,54 @@
+2021-06-13 12:35:41,108 | app.shortener | [INFO] : app.shortener | 58 | shortener | shortener.py | Base numbers generate are: [18]
+2021-06-13 12:35:41,108 | app.shortener | [INFO] : app.shortener | 63 | shortener | shortener.py | The base sum is: 18.0
+2021-06-13 12:35:41,108 | app.shortener | [INFO] : app.shortener | 73 | shortener | shortener.py | The url that is being sent back is https://www.youtube.com/results?search_query=ecommerce+flask+app+on+heroku
+2021-06-13 12:39:15,362 | app.shortener | [INFO] : app.shortener | 58 | shortener | shortener.py | Base numbers generate are: [18]
+2021-06-13 12:39:15,362 | app.shortener | [INFO] : app.shortener | 63 | shortener | shortener.py | The base sum is: 18.0
+2021-06-13 12:39:15,363 | app.shortener | [INFO] : app.shortener | 73 | shortener | shortener.py | The url that is being sent back is https://www.youtube.com/results?search_query=ecommerce+flask+app+on+heroku
+2021-06-13 12:42:22,344 | app.shortener | [INFO] : app.shortener | 39 | shortener | shortener.py | Adding it to the database
+2021-06-13 12:42:59,578 | app.shortener | [INFO] : app.shortener | 39 | shortener | shortener.py | Adding it to the database
+2021-06-13 12:42:59,584 | app.shortener | [INFO] : app.shortener | 41 | shortener | shortener.py | Added to the database
+2021-06-13 12:42:59,584 | app.shortener | [INFO] : app.shortener | 44 | shortener | shortener.py | The shortened URL is k
+2021-06-13 12:43:04,986 | app.shortener | [INFO] : app.shortener | 58 | shortener | shortener.py | Base numbers generate are: [20]
+2021-06-13 12:43:04,986 | app.shortener | [INFO] : app.shortener | 63 | shortener | shortener.py | The base sum is: 20.0
+2021-06-13 12:43:04,986 | app.shortener | [INFO] : app.shortener | 73 | shortener | shortener.py | The url that is being sent back is https://stackoverflow.com/questions/14132789/relative-imports-for-the-billionth-time
+2021-06-13 12:48:23,905 | __main__ | [INFO] : __main__ | 36 | server | server.py | Index request received
+2021-06-13 12:48:29,275 | __main__ | [INFO] : __main__ | 43 | server | server.py | URL received is https://stackoverflow.com/questions/22711087/flask-importerror-no-module-named-app
+2021-06-13 12:48:29,542 | __main__ | [INFO] : __main__ | 61 | server | server.py | Sending back shortened Route
+2021-06-13 12:49:03,571 | __main__ | [INFO] : __main__ | 66 | server | server.py | The code for the url is j
+2021-06-13 12:49:03,572 | app.shortener | [INFO] : app.shortener | 58 | shortener | shortener.py | Base numbers generate are: [19]
+2021-06-13 12:49:03,573 | app.shortener | [INFO] : app.shortener | 63 | shortener | shortener.py | The base sum is: 19.0
+2021-06-13 12:49:03,573 | app.shortener | [INFO] : app.shortener | 73 | shortener | shortener.py | The url that is being sent back is https://stackoverflow.com/questions/22711087/flask-importerror-no-module-named-app
+2021-06-13 12:49:03,575 | __main__ | [INFO] : __main__ | 83 | server | server.py | Redirecting to url https://stackoverflow.com/questions/22711087/flask-importerror-no-module-named-app
+2021-06-13 12:56:34,764 | __main__ | [INFO] : __main__ | 36 | server | server.py | Index request received
+2021-06-13 12:56:43,177 | __main__ | [INFO] : __main__ | 43 | server | server.py | URL received is https://www.youtube.com/results?search_query=ecommerce+flask+app+on+heroku
+2021-06-13 12:56:43,412 | __main__ | [INFO] : __main__ | 61 | server | server.py | Sending back shortened Route
+2021-06-13 12:56:50,996 | __main__ | [INFO] : __main__ | 66 | server | server.py | The code for the url is i
+2021-06-13 12:56:50,997 | app.shortener | [INFO] : app.shortener | 59 | shortener | shortener.py | Base numbers generate are: [18]
+2021-06-13 12:56:50,998 | app.shortener | [INFO] : app.shortener | 64 | shortener | shortener.py | The base sum is: 18.0
+2021-06-13 12:56:50,999 | app.shortener | [INFO] : app.shortener | 74 | shortener | shortener.py | The url that is being sent back is https://www.youtube.com/results?search_query=ecommerce+flask+app+on+heroku
+2021-06-13 12:56:51,001 | __main__ | [INFO] : __main__ | 83 | server | server.py | Redirecting to url https://www.youtube.com/results?search_query=ecommerce+flask+app+on+heroku
+2021-06-13 12:57:09,674 | __main__ | [INFO] : __main__ | 43 | server | server.py | URL received is https://stackoverflow.com/questions/36189354/python-import-error-no-module-named-app
+2021-06-13 12:57:09,678 | app.shortener | [INFO] : app.shortener | 41 | shortener | shortener.py | Adding it to the database
+2021-06-13 12:57:09,687 | app.shortener | [INFO] : app.shortener | 43 | shortener | shortener.py | Added to the database
+2021-06-13 12:57:09,688 | app.shortener | [INFO] : app.shortener | 46 | shortener | shortener.py | The shortened URL is l
+2021-06-13 12:57:09,730 | __main__ | [INFO] : __main__ | 61 | server | server.py | Sending back shortened Route
+2021-06-13 12:57:13,180 | __main__ | [INFO] : __main__ | 43 | server | server.py | URL received is https://stackoverflow.com/questions/36189354/python-import-error-no-module-named-app
+2021-06-13 12:57:13,217 | __main__ | [INFO] : __main__ | 61 | server | server.py | Sending back shortened Route
+2021-06-13 12:57:26,587 | __main__ | [INFO] : __main__ | 66 | server | server.py | The code for the url is l
+2021-06-13 12:57:26,588 | app.shortener | [INFO] : app.shortener | 59 | shortener | shortener.py | Base numbers generate are: [21]
+2021-06-13 12:57:26,588 | app.shortener | [INFO] : app.shortener | 64 | shortener | shortener.py | The base sum is: 21.0
+2021-06-13 12:57:26,589 | app.shortener | [INFO] : app.shortener | 74 | shortener | shortener.py | The url that is being sent back is https://stackoverflow.com/questions/36189354/python-import-error-no-module-named-app
+2021-06-13 12:57:26,590 | __main__ | [INFO] : __main__ | 83 | server | server.py | Redirecting to url https://stackoverflow.com/questions/36189354/python-import-error-no-module-named-app
+2021-06-13 12:57:43,900 | __main__ | [INFO] : __main__ | 66 | server | server.py | The code for the url is 89g
+2021-06-13 12:57:43,901 | app.shortener | [INFO] : app.shortener | 59 | shortener | shortener.py | Base numbers generate are: [16, 9, 8]
+2021-06-13 12:57:43,901 | app.shortener | [INFO] : app.shortener | 64 | shortener | shortener.py | The base sum is: 31326.0
+2021-06-13 12:57:43,906 | app.shortener | [ERROR] : app.shortener | 69 | shortener | shortener.py | The url is unknown
+NoneType: None
+2021-06-13 12:57:43,907 | __main__ | [ERROR] : __main__ | 73 | server | server.py | The following Exception has happened: URL is unknown
+Traceback (most recent call last):
+  File "C:\Users\sherwin\projects\UrlShortener\server.py", line 70, in resolveUrl
+    resolved_url = Shortener.resolve(code)
+  File "C:\Users\sherwin\projects\UrlShortener\app\shortener.py", line 70, in resolve
+    raise Exception("URL is unknown")
+Exception: URL is unknown
+2021-06-13 12:57:43,910 | __main__ | [INFO] : __main__ | 77 | server | server.py | Sending back error html as URL wasn't found

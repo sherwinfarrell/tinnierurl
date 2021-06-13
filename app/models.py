@@ -1,5 +1,6 @@
 from flask_sqlalchemy import SQLAlchemy
 from .db import db
+from .log import CustomLogger
 
 class TinnieRepository(db.Model):
     __tablename__ = 'urltracker'
@@ -9,11 +10,15 @@ class TinnieRepository(db.Model):
     def __init__(self, url):
         self.url = url
 
+cl_logger = CustomLogger(__name__)
+logger = cl_logger.get_logger()
+
 def check_url(query_url):
     try:
         count = db.session.query(TinnieRepository).filter(TinnieRepository.url == query_url).count()
         return count != 0
     except Exception as e:
+        logger.exception(f"Failed to verify the url in db becuase: {str(e)}")
         raise Exception(f"Failed to verify the url in db becuase: {e}")
 
 def return_id(url):
@@ -21,6 +26,8 @@ def return_id(url):
         row = db.session.query(TinnieRepository).filter(TinnieRepository.url == url).first()
         return row.id
     except Exception as e:
+        logger.exception(f"Failed to get the id of the url because of: {str(e)}")
+
         raise Exception(f"Failed to get the id of the url because of: {e}")
 
 def add_url(url):
@@ -31,6 +38,7 @@ def add_url(url):
         db.session.commit()
         return data.id
     except Exception as e:
+        logger.exception(f"Adding of url to Db was Unsuccessful because {str(e)}")
         raise Exception(f"Adding of url to Db was Unsuccessful because {e}")
 
 def get_url(id):
