@@ -2,7 +2,7 @@
 import math
 import logging
 import psycopg2
-from . import models 
+import models 
 
 class Shortener():
     memory_dict = {}
