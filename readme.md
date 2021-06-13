@@ -9,20 +9,19 @@ https://tinnieurl.herokuapp.com/
 
 ## Running the Application
 
-### Create a virtual enviromnet named disasterEnv
+### [Optional] - Create a virtual environment
 
 `python -m venv tinnieUrl`
 
-### Stating the env
-
+Activate the Env  
 Windows : `./tinnieUrl/Scripts/activate`  
 Mac : `source ./tinnieUrl/bin/activate`  
 Linux : `source ./tinnieUrl/bin/activate`
 
-### To install all the dependecies
+### Main Steps (Virtual Env Optional)- Install all the Dependecies
 
 `pip install -r requirement.txt`
 
-### To Run the Application
+### Run the Application
 
 ` python server.py`
